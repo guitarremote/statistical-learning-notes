@@ -1,6 +1,51 @@
 ## Notes on Statistical learning
 
-#### Types of machine learning algortihms
+#### Overview of Statistical Learning :
+
+#### Linear Regression :
+
+#### Classification : 
+
+* Logistic regression
+* Multiple Logistic Regression
+* Linear Discriminant Analysis
+* Quadratic Discriminant Analysis
+* K-Nearest Neighbors
+
+#### Resampling methods :
+ 
+ * Validation set approach
+ * Leave-one-out cross validation
+ * k-Fold Cross Validation
+ * Train,test,validation
+ * Bootstrap
+
+#### Tree based models :
+
+* Decision Trees
+* Bagged Trees
+* Random Forests
+* Gradient Boosted Models(Boosting)
+
+#### Unsupervised Learning :
+
+* Principal Component Analysis
+* K-means clustering
+* Hierarchical clustering
+
+#### Evaluation metrics :
+
+* RMSE
+* log-loss/cross-entropy
+* AUC
+ 
+#### Regularization :
+#### General Models Additive :
+#### Support Vector Machines :
+---
+### Overview of Statistical Learning:
+
+#### Types of machine learning algortihms:
 
 * Supervised Learning - Linear regression, Logistic regression etc.
 * Unsupervised Learning - k-means clustering, Hierarchical clustering etc. 
@@ -32,51 +77,30 @@ On the other hand, *bias* refers to the error that is introduced by approximatin
 
 As a general rule, as we use more flexible methods, the variance will increase and the bias will decrease.
 
-#### Linear Regression
+### Decision Trees :
 
-#### Classification: 
+* Minimation metric: gini index or informaton gain for classification problems, Residual sum of squares (RSS) for regression
+* Hyperparameters for tuning:
+	* **minsplit**- minimum number of noes needed to attempt a split
+	* **cp**- complexity parameter
+	* **maxdepth**- depth of a decision tree
+* Pruning
 
-* Logistic regression
-* Multiple Logistic Regression
-* Linear Discriminant Analysis
-* Quadratic Discriminant Analysis
-* K-Nearest Neighbors
+### Bagged Trees :
 
-#### Resampling methods:
- 
- * Validation set approach
- * Leave-one-out cross validation
- * k-Fold Cross Validation
- * Train,test,validation
- * Bootstrap
+* **Bootstrap aggregation**(Bagging) is a general purpose procedure for reducing the variance of a statistical learning method.
+* **Bootstrapping** is nothing sampling with replacement.
+* Decision Trees have a high variance and low bias
+* In bagged trees, we generate N different bootstrapped datasets and build N different decision trees and take the average of all the N trees
+* Averaging the N trees reduces the variance
+* Bagged trees are basically **ensemble** of decision trees built upon bootstrapped datasets 
+* Interpretability is lost because of this though. However, the variable importance measures can be obtained by recording how much the RSS(for regression trees) or the gini index(for classification) has decreased on average across all N trees due to splits over the variable.
 
-#### Tree based models :
+### Random Forests :
 
-* Decision Trees
-	* Splitting criterion: gini index/informaton gain
-	* Hyperparameters for tuning:
-		* **minsplit**- minimum number of noes needed to attempt a split
-		* **cp**- complexity parameter
-		* **maxdepth**- depth of a decision tree
-* Bagging, Random Forests
-* Gradient Boosted Models(Boosting)
-
-#### Unsupervised Learning :
-
-* Principal Component Analysis
-* K-means clustering
-* Hierarchical clustering
-
-#### Evaluation metrics :
-
-* RMSE
-* log-loss/cross-entropy
-* AUC
- 
-
-Totally not known things
-
-Regularization, General Additive Models, Support Vector Machines
-
+* Random forests provide an improvement over bagged trees by way of a small tweak that **decorrelates** the trees.
+* In bagging, we build a number of decision trees on bootstrapped training samples. 
+* In random forests, each time a split in a tree is considered, a random sample of m predictors is chosen as split candidates from the full set of p predictors.
+* The split is allowed to use only one of those m predictors. A fresh sample of m predictors is taken at each split, and typically we choose m ≈ √p
 
 
