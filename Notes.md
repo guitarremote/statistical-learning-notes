@@ -40,6 +40,8 @@
 * AUC
  
 #### Regularization :
+* Ridge regression 
+* LASSO regression
 #### General Models Additive :
 #### Support Vector Machines :
 ---
@@ -104,3 +106,7 @@ As a general rule, as we use more flexible methods, the variance will increase a
 * The split is allowed to use only one of those m predictors. A fresh sample of m predictors is taken at each split, and typically we choose m ≈ √p
 
 
+### Ridge & Lasso:
+* Same as linear regression, but the loss function we try to minimize will have RSS+ lambda times the sum of squares of regression coefficients, where lamda isthe tuning parameter
+* LASSO is similar of Ridge, only difference is instead of square of the coefficients, the absolute value multiplied by lambda is added to the loss function
+* Regularization, significantly reduces the variance of the model, without substantial increase in its bias
