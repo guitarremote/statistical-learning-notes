@@ -8,6 +8,7 @@
 
 * Logistic regression
 * Multiple Logistic Regression
+* Naive Bayes
 * Linear Discriminant Analysis
 * Quadratic Discriminant Analysis
 * K-Nearest Neighbors
