@@ -111,3 +111,24 @@ As a general rule, as we use more flexible methods, the variance will increase a
 * Same as linear regression, but the loss function we try to minimize will have RSS+ lambda times the sum of squares of regression coefficients, where lamda isthe tuning parameter
 * LASSO is similar of Ridge, only difference is instead of square of the coefficients, the absolute value multiplied by lambda is added to the loss function
 * Regularization, significantly reduces the variance of the model, without substantial increase in its bias
+
+### Questions testing understanding :
+* Does feature standardization improve model performance? Why do we need it?
+* What is the problem with having multicollinearity/ correlated features?
+* Does coarse classification of continuous variables improve model performance?
+* How can gbm be parallelized(xgboost) if the second tree is dependent on the first tree?
+* How do class weights work? How is it added in the error function for regession and classification problems?
+* What is the difference between an ordinary least squares linear model and generalized linear model(GLM)?
+* Does keeping insignficant features impact model performance?
+* What is curse of dimensionality?
+* Does doing PCA improve model performance?
+* What are the important hyperparameters for decision trees, random forests, gbm, xgboost?
+* Are xgboost and gbm the same?
+* What does bag.fraction and train.fraction do in gbm function?
+* Why is the default distribution "bernoulli" in gbm function
+* What will happen if the response actually doesn't follow a guassian or binomial distribution? What does the distributon parameter in the gbm function do? 
+* How does regularization work in tree based models?
+* How does regularization work in classification problems?
+* How do you define the number of clusters in a clustering problem?
+* Explain test-set and validation set approach
+* What is decomposition of variance?
