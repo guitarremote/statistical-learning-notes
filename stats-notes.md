@@ -31,8 +31,13 @@ For normally distributed data the standard deviation has some extra information,
 	*  Often one of the two treatments is the standard existing treatment, which in some cases may be no treatment.
 	* The subjects exposed to standard treatment is called the *control group* and the other group is called *treatment group*
 	* Example: Testing two prices to determine which yields more net profit
+	
+* **Resampling for hypothesis testing** 
+	*  Bootstrapping
+	*  Permutation test	
+	
 * **ANOVA**
-* **Chi-squatre test**
+* **Chi-square test**
 
 **t-test and z-test**
 
@@ -58,3 +63,5 @@ In a z-test, we know the population standard deviation. Instead of t-statistic, 
 $$ z^*=(\bar{x}-\mu_{0})/\sigma/\sqrt{N}$$
 
 As a thumb rule, for both t-test and z-test if a 95% confidence interval is being considered for hypothesis testing, any t/z statistic which is 2 SE's greater than or less than the Null Hypothesis value will have a probability less than 0.05. Meaning we can reject the Null Hypothesis.
+
+* **two sample t-test**

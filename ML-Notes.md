@@ -132,3 +132,7 @@ As a general rule, as we use more flexible methods, the variance will increase a
 * How do you define the number of clusters in a clustering problem?
 * Explain test-set and validation set approach
 * What is decomposition of variance?
+* What are interactions? How do you check for interactions?
+* What does glmnet package in R do? How is it different from glm?
+* Can Ch-squared test be used with non-count data?
+* What is Bayes therem? Difference between prior and posterior probability?
