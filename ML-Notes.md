@@ -117,6 +117,7 @@ As a general rule, as we use more flexible methods, the variance will increase a
 * What is the problem with having multicollinearity/ correlated features?
 * Does coarse classification of continuous variables improve model performance?
 * How can gbm be parallelized(xgboost) if the second tree is dependent on the first tree?
+* How is variable importance calculated in ensemble tree based models?
 * How do class weights work? How is it added in the error function for regession and classification problems?
 * What is the difference between an ordinary least squares linear model and generalized linear model(GLM)?
 * Does keeping insignficant features impact model performance?
@@ -124,7 +125,7 @@ As a general rule, as we use more flexible methods, the variance will increase a
 * Does doing PCA improve model performance?
 * What are the important hyperparameters for decision trees, random forests, gbm, xgboost?
 * Are xgboost and gbm the same?
-* What does bag.fraction and train.fraction do in gbm function?
+* What do bag.fraction and train.fraction do in gbm function?
 * Why is the default distribution "bernoulli" in gbm function
 * What will happen if the response actually doesn't follow a guassian or binomial distribution? What does the distributon parameter in the gbm function do? 
 * How does regularization work in tree based models?
@@ -134,5 +135,5 @@ As a general rule, as we use more flexible methods, the variance will increase a
 * What is decomposition of variance?
 * What are interactions? How do you check for interactions?
 * What does glmnet package in R do? How is it different from glm?
-* Can Ch-squared test be used with non-count data?
+* Can Chi-squared test be used with non-count data?
 * What is Bayes therem? Difference between prior and posterior probability?
