@@ -118,6 +118,7 @@ As a general rule, as we use more flexible methods, the variance will increase a
 * Does coarse classification of continuous variables improve model performance?
 * How can gbm be parallelized(xgboost) if the second tree is dependent on the first tree?
 * How is variable importance calculated in ensemble tree based models?
+* Say I am trying to predict the house prices using gbm model. Will I get correct results if I build the model without log-transforming the price? 
 * How do class weights work? How is it added in the error function for regession and classification problems?
 * What is the difference between an ordinary least squares linear model and generalized linear model(GLM)?
 * Does keeping insignficant features impact model performance?
