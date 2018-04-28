@@ -113,19 +113,19 @@ As a general rule, as we use more flexible methods, the variance will increase a
 * Regularization, significantly reduces the variance of the model, without substantial increase in its bias
 
 ### Questions testing understanding :
-* How to know if your model has high bias or high variance? 
-Ans. We can know this by plotting learning curves. We plot the error on the training set and on the cross-validation set as functions of the number of training examples(randomly selected sets from training) for some set of training set sizes.
-In the typical *high bias* case, the cross-validation error will initially go down and then plateau as the number of training examples grow. (With high bias, more data doesn’t help beyond a certain point.) The training error will initially go up and then plateau at approximately the level of the cross-validation error (usually a fairly high level of error). So if you have similar cross-validation and training errors for a range of training set sizes, you may have a high-bias model and should look into generating new features or changing the model structure in some other way.
-In the typical *high variance* case, the training error will increase somewhat with the number of training examples, but usually to a lower level than in the high-bias case. (The classifier is now more flexible and can fit the training data more easily, but will still suffer somewhat from having to adapt to many data points.) The cross-validation error will again start high and decrease with the number of training examples to a lower but still fairly high level. So the crucial diagnostic is that the difference between the cross-validation error and the training set error is high. In this case, you may want to try to obtain more data, or if that isn’t possible, decrease the number of features.
+* How to know if your model has high bias or high variance?<br/> 
+Ans. We can know this by plotting learning curves. We plot the error on the training set and on the cross-validation set as functions of the number of training examples(randomly selected sets from training) for some set of training set sizes.<br/>
+In the typical *high bias* case, the cross-validation error will initially go down and then plateau as the number of training examples grow. (With high bias, more data doesn’t help beyond a certain point.) The training error will initially go up and then plateau at approximately the level of the cross-validation error (usually a fairly high level of error). So if you have similar cross-validation and training errors for a range of training set sizes, you may have a high-bias model and should look into generating new features or changing the model structure in some other way.<br/>
+In the typical *high variance* case, the training error will increase somewhat with the number of training examples, but usually to a lower level than in the high-bias case. (The classifier is now more flexible and can fit the training data more easily, but will still suffer somewhat from having to adapt to many data points.) The cross-validation error will again start high and decrease with the number of training examples to a lower but still fairly high level. So the crucial diagnostic is that the difference between the cross-validation error and the training set error is high. In this case, you may want to try to obtain more data, or if that isn’t possible, decrease the number of features.<br/>
 
-* How to reduce bias or reduce variance in your model?
+* How to reduce bias or reduce variance in your model?<br/>
 Ans. 
 1) **Get more training examples** :
-More training examples will work when you have high variance. More training examples will not fix a high bias, because your underlying model will still not be able to approximate the correct function.
+More training examples will work when you have high variance. More training examples will not fix a high bias, because your underlying model will still not be able to approximate the correct function.<br/>
 2) **Smaller sets of features**:
-Smaller sets of features will work when you have higher variance. Ng says, if you think you have high bias, “for goodness’ sake don’t waste your time by trying to carefully select the best features”
+Smaller sets of features will work when you have higher variance. Ng says, if you think you have high bias, “for goodness’ sake don’t waste your time by trying to carefully select the best features”.<br/>
 3)**Try to obtain new features**:
-This will work when the model is suffering from high bias
+This will work when the model is suffering from high bias.<br/>
 
 * Does feature standardization improve model performance? Why do we need it?
 
@@ -133,7 +133,7 @@ This will work when the model is suffering from high bias
 
 * Does coarse classification of continuous variables improve model performance?
 
-* How bagging work for classification problems i.e., when the ressponse variable is *qualitative*?
+* How bagging work for classification problems i.e., when the ressponse variable is *qualitative*?<br/>
 Ans.  There are quite a few approaches, but the simplest approach is taking the most commonly occuring class(majority vote) in all the bagged trees 
 
 * How is OOB error calculated for ensemble models (say trees)?<br/>
@@ -141,7 +141,7 @@ Ans. Mathematically we can prove that, on average, each bagged tree makes use of
 
 * How can gbm be parallelized(xgboost) if the second tree is dependent on the first tree?
 
-* How is variable importance calculated in ensemble tree based models?
+* How is variable importance calculated in ensemble tree based models?<br/>
 Ans.  The variable importance measures can be obtained by recording how much the RSS(for regression trees) or the gini index(for classification) has decreased on average across all N trees due to splits over the variable.
 
 * Say I am trying to predict the house prices using gbm model. Will I get correct results if I build the model without log-transforming the price?
