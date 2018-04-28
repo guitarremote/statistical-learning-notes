@@ -136,7 +136,7 @@ This will work when the model is suffering from high bias
 * How bagging work for classification problems i.e., when the ressponse variable is *qualitative*?
 Ans.  There are quite a few approaches, but the simplest approach is taking the most commonly occuring class(majority vote) in all the bagged trees 
 
-* How is OOB error calculated for ensemble models (say trees)?
+* How is OOB error calculated for ensemble models (say trees)?<br/>
 Ans. Mathematically we can prove that, on average, each bagged tree makes use of around two-thirds of the observations. The remaining one-third of the observations not used to fit a given bagged tree are referred to as the out-of-bag (OOB) observations. We can predict the response for an observation using each of the trees in which that observation was OOB and take their average (or majority vote). The OOB predicton is used to calculate OOB error.
 
 * How can gbm be parallelized(xgboost) if the second tree is dependent on the first tree?
@@ -145,7 +145,6 @@ Ans. Mathematically we can prove that, on average, each bagged tree makes use of
 Ans.  The variable importance measures can be obtained by recording how much the RSS(for regression trees) or the gini index(for classification) has decreased on average across all N trees due to splits over the variable.
 
 * Say I am trying to predict the house prices using gbm model. Will I get correct results if I build the model without log-transforming the price?
-Ans. Yes, unlike linear regression, there's no underlying assumption in decision trees that the response variable must be normally distributed.
  
 * How do class weights work? How is it added in the error function for regession and classification problems?
 
