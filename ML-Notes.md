@@ -113,8 +113,24 @@ As a general rule, as we use more flexible methods, the variance will increase a
 * Regularization, significantly reduces the variance of the model, without substantial increase in its bias
 
 ### Questions testing understanding :
+* How to know if your model has high bias or high variance? 
+Ans. We can know this by plotting learning curves. We plot the error on the training set and on the cross-validation set as functions of the number of training examples(randomly selected sets from training) for some set of training set sizes.
+In the typical *high bias* case, the cross-validation error will initially go down and then plateau as the number of training examples grow. (With high bias, more data doesn’t help beyond a certain point.) The training error will initially go up and then plateau at approximately the level of the cross-validation error (usually a fairly high level of error). So if you have similar cross-validation and training errors for a range of training set sizes, you may have a high-bias model and should look into generating new features or changing the model structure in some other way.
+In the typical *high variance* case, the training error will increase somewhat with the number of training examples, but usually to a lower level than in the high-bias case. (The classifier is now more flexible and can fit the training data more easily, but will still suffer somewhat from having to adapt to many data points.) The cross-validation error will again start high and decrease with the number of training examples to a lower but still fairly high level. So the crucial diagnostic is that the difference between the cross-validation error and the training set error is high. In this case, you may want to try to obtain more data, or if that isn’t possible, decrease the number of features.
+
+* How to reduce bias or reduce variance in your model?
+Ans. 
+1) **Get more training examples** :
+More training examples will work when you have high variance. More training examples will not fix a high bias, because your underlying model will still not be able to approximate the correct function.
+2) **Smaller sets of features**:
+Smaller sets of features will work when you have higher variance. Ng says, if you think you have high bias, “for goodness’ sake don’t waste your time by trying to carefully select the best features”
+3)**Try to obtain new features**:
+This will work when the model is suffering from high bias
+
 * Does feature standardization improve model performance? Why do we need it?
+
 * What is the problem with having multicollinearity/ correlated features?
+
 * Does coarse classification of continuous variables improve model performance?
 
 * How bagging work for classification problems i.e., when the ressponse variable is *qualitative*?
@@ -132,21 +148,39 @@ Ans.  The variable importance measures can be obtained by recording how much the
 Ans. Yes, unlike linear regression, there's no underlying assumption in decision trees that the response variable must be normally distributed.
  
 * How do class weights work? How is it added in the error function for regession and classification problems?
+
 * What is the difference between an ordinary least squares linear model and generalized linear model(GLM)?
+
 * Does keeping insignficant features impact model performance?
+
 * What is curse of dimensionality?
+
 * Does doing PCA improve model performance?
+
 * What are the important hyperparameters for decision trees, random forests, gbm, xgboost?
+
 * Are xgboost and gbm the same?
+
 * What do bag.fraction and train.fraction do in gbm function?
+
 * Why is the default distribution "bernoulli" in gbm function
+
 * What will happen if the response actually doesn't follow a guassian or binomial distribution? What does the distributon parameter in the gbm function do? 
+
 * How does regularization work in tree based models?
+
 * How does regularization work in classification problems?
+
 * How do you define the number of clusters in a clustering problem?
+
 * Explain test-set and validation set approach
+
 * What is decomposition of variance?
+
 * What are interactions? How do you check for interactions?
+
 * What does glmnet package in R do? How is it different from glm?
+
 * Can Chi-squared test be used with non-count data?
+
 * What is Bayes therem? Difference between prior and posterior probability?
