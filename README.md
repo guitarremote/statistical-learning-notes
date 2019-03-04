@@ -1,2 +1,2 @@
 # statistical-learning-notes
-Notes on statistical learning
+A repository consisting of questions relating to deeper level understanding of statistics and machine learning concepts
