@@ -2,7 +2,7 @@
 ## Questions on statistics and machine learning
 
 * What is the difference between **standard deviation** and **standard error** ?
-	* The **Standard Error** of a **statistic** is the standard deviation of its **samplng distribution**. Going by that analogy, the **standard error of the mean**(SEM) is an estimate of how far the **sample mean** is likely to be from the **population mean**. The **standard deviation** of the sample on the other hand is the degree to which individuals within the sample differ from the sample mean.
+	* The **Standard Error** of a **statistic** is the standard deviation of its **sampling distribution**. Going by that analogy, the **standard error of the mean**(SEM) is an estimate of how far the **sample mean** is likely to be from the **population mean**. The **standard deviation** of the sample on the other hand is the degree to which individuals within the sample differ from the sample mean.
 	* Since population standard deviation is seldom known, the standard error is usually estimated as the sample standard deviation divided by the square root of sample size(N)
 
 * What is the law of large numbers ?
@@ -19,7 +19,7 @@
 	* In probability and statistics, the t-distribution is any member of a family of continuous probability distributions that arises when estimating the mean of a normally distributed population in situations where the sample size is small and population standard deviation is unknown.
 	* According to the **central limit theorem**, the sampling distribution of a statistic will follow a normal distribution, as long as the sample size is sufficiently large. Therefore, when we know the standard deviation of the population, we can compute a z-statistic, and use the normal distribution to evaluate probabilities with the sample mean.
 
-	* The t distribution is used when you have small samples. The larger the sample size, the more the t distribution looks like the normal distribution. In fact, for sample sizes larger than 20 (e.g. more degrees of freedom), the distribution is almost exactly like the normal distribution. The probability value corresponding to a t-statistic is looked up in the t-table corresponsing to N-1 degrees of freedom and if it is less than the  **significance level**(alpha-level usually 5%), then we can reject the Null Hypothesis.
+	* The t distribution is used when you have small samples. The larger the sample size, the more the t distribution looks like the normal distribution. In fact, for sample sizes larger than 20 (e.g. more degrees of freedom), the distribution is almost exactly like the normal distribution. The probability value corresponding to a t-statistic is looked up in the t-table corresponding to N-1 degrees of freedom and if it is less than the  **significance level**(alpha-level usually 5%), then we can reject the Null Hypothesis.
 	* In a z-test, we know the population standard deviation. Instead of t-statistic, we calculate the z-statistic and its corresponding p-value in Normal distribution.
 
 * What are the different types of ML algorithms ?
@@ -125,8 +125,7 @@ This will work when the model is suffering from high bias.
 * How does regularization work in classification problems?
 
 * How do you define the number of clusters in a clustering problem?
-    * Clustering is an unsupervised learning problem where the aim is to segment the data into several clusters, so that points with similar nature (column values) fall in the same cluster. The objective function here will take some form of distance metric between the different points. The lower the distance, closer the points are and more probable to be in the same cluster. Typically, we would define cluster centers and measure the distance of each point from this cluster center. Sum all of these up to get the total "cost" for the current cluster count. Now, we can repeat the same exercise with different cluster counts and do a plot of cost vs cluster count, which typically would take the shape of an elbow as seen below.<br>
-    (https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
+    * Clustering is an unsupervised learning problem where the aim is to segment the data into several clusters, so that points with similar nature (column values) fall in the same cluster. The objective function here will take some form of distance metric between the different points. The lower the distance, closer the points are and more probable to be in the same cluster. Typically, we would define cluster centers and measure the distance of each point from this cluster center. Sum all of these up to get the total "cost" for the current cluster count. Now, we can repeat the same exercise with different cluster counts and do a plot of cost vs cluster count, which typically would take the shape of an [elbow](https://github.com/DragonWarrior15/statistical-learning-notes/blob/master/images/elbow_plot.png).
     * A better metric to judge the no of clusters can be [Silhouette distance](https://en.wikipedia.org/wiki/Silhouette_(clustering)).
 
 * Explain test-set and validation set approach
